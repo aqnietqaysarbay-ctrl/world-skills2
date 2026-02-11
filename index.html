@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap"
+      rel="stylesheet"
+    />
+    <style></style>
+  </head>
+  <style>
+    .bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    .container {
+      @import url("https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap");
+      font-family: "Silkscreen", sans-serif;
+    }
+    .line p {
+      @import url("https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap");
+      font-size: 20px;
+      font-family: "Silkscreen", sans-serif;
+    }
+    input[type="checkbox"] {
+      transform: scale(1.5);
+    }
+
+    .custom-check input:checked + span {
+      background-color: rgb(255, 92, 176);
+    }
+    .done {
+      text-decoration: line-through;
+      opacity: 0.6;
+    }
+    body {
+      background-image: url(cherry-blossom.1920x1080.mp4);
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      @import url("https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap");
+      font-family: "Silkscreen", sans-serif;
+    }
+    .container {
+      position: relative;
+      z-index: 100;
+      background-color: rgba(255, 120, 190, 0.844);
+      padding: 20px;
+      border-radius: 30px;
+      display: flex;
+      flex-direction: column;
+      width: 700px;
+    }
+    .line {
+      width: 690px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 0px;
+
+      align-items: center;
+      @import url("https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap");
+      font-family: "Silkscreen", sans-serif;
+    }
+    .work {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+    }
+    button {
+      font-size: 15px;
+      padding: 10px;
+      background-color: rgb(255, 255, 255);
+      color: rgb(255, 141, 202);
+      font-weight: 900;
+      border: 5px solid rgb(255, 55, 162);
+      border-radius: 10px;
+      width: 120px;
+      @import url("https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap");
+      font-family: "Silkscreen", sans-serif;
+    }
+    input {
+      padding: 10px;
+      background-color: rgb(255, 255, 255);
+      color: rgb(255, 141, 202);
+      font-weight: 900;
+      border: 5px solid rgb(255, 55, 162);
+      border-radius: 10px;
+      font-size: small;
+      @import url("https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap");
+      font-family: "Silkscreen", sans-serif;
+    }
+    :placeholder-shown {
+      font-size: 15px;
+      color: rgb(255, 255, 255);
+      @import url("https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap");
+      font-family: "Silkscreen", sans-serif;
+    }
+    ::placeholder {
+      font-size: 15px;
+      color: rgb(255, 141, 202);
+      @import url("https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap");
+      font-family: "Silkscreen", sans-serif;
+    }
+    p {
+      color: rgb(255, 255, 255);
+      font-weight: 900;
+      font-family: sans-serif;
+    }
+
+    span {
+      color: rgb(255, 255, 255);
+      font-weight: 900;
+      font-family: sans-serif;
+    }
+    .check-btn {
+      display: inline-flex;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .check-btn input {
+      display: none; /* нағыз checkbox жасырамыз */
+    }
+
+    .box {
+      width: 26px;
+      height: 26px;
+      background: #ffffff74;
+      border: 3px solid rgb(255, 55, 162);
+      border-radius: 6px;
+      transition: 0.2s;
+    }
+
+    /* checked болғанда */
+    .check-btn input:checked + .box {
+      background: white;
+      border: 3px solid rgb(255, 55, 162);
+    }
+
+    /* галочка */
+    .box::after {
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      position: absolute;
+      display: none;
+    }
+
+    .check-btn input:checked + .box::after {
+      display: block;
+    }
+
+    .list {
+      width: 98.6%;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      gap: 0px;
+      justify-content: baseline;
+    }
+    .ino {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+    }
+  </style>
+  <body>
+    <video autoplay muted loop class="bg-video">
+      <source src="minecraft-sakura-pond-moewalls-com.mp4" type="video/mp4" />
+    </video>
+    <div class="container">
+      <div class="work">
+        <input
+          style="width: 520px"
+          type="text"
+          name=""
+          id="type"
+          placeholder="Type something..."
+        />
+        <button id="btn">Add</button>
+      </div>
+      <div class="list"></div>
+      <!-- <div class="list">
+        <div class="line">
+          <p id="plan">ll</p>
+          <input id="checkone" type="checkbox" />
+        </div>
+      </div> -->
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
